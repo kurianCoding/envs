@@ -1,11 +1,11 @@
-package rnv
+package envs
 
 import (
 	"os"
 	"strings"
 )
 
-func ReadEvns() map[string]string {
+func Read() map[string]string {
 	lines := os.Environ()
 	key := make(map[string]string)
 	for _, line := range lines {
