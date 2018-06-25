@@ -5,7 +5,7 @@ import "os"
 
 func TestReadenv(t *testing.T) {
 	os.Setenv("test", "random")
-	value := Read()["test"]
+	value := string(Read()["test"].(string))
 	if value != "random" {
 		t.Errorf("read value is different than set value %s", value)
 	}
